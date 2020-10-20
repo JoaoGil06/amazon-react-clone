@@ -43,6 +43,10 @@ export const Navigation = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
+  > a {
+    text-decoration: none;
+  }
 `;
 
 export const NavigationOption = styled.div`

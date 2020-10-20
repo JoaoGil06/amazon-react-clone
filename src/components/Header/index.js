@@ -33,10 +33,12 @@ const Header = () => {
       </Search>
 
       <Navigation>
-        <NavigationOption>
-          <NavigationOptionLineOne>Hello Guest</NavigationOptionLineOne>
-          <NavigationOptionLineTwo>Sign In</NavigationOptionLineTwo>
-        </NavigationOption>
+        <Link to="/login">
+          <NavigationOption>
+            <NavigationOptionLineOne>Hello Guest</NavigationOptionLineOne>
+            <NavigationOptionLineTwo>Sign In</NavigationOptionLineTwo>
+          </NavigationOption>
+        </Link>
 
         <NavigationOption>
           <NavigationOptionLineOne>Returns</NavigationOptionLineOne>

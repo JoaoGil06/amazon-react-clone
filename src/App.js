@@ -2,6 +2,7 @@ import React from "react";
 
 import Header from "./components/Header";
 import Home from "./pages/Home";
+import Login from "./pages/Login";
 import Checkout from "./pages/Checkout";
 
 import GlobalStyles from "./styles/GlobalStyles";
@@ -19,6 +20,9 @@ function App() {
         <Switch>
           <Route path="/" exact>
             <Home />
+          </Route>
+          <Route path="/login">
+            <Login />
           </Route>
           <Route path="/checkout">
             <Checkout />

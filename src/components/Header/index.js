@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import {
   HeaderComponent,
@@ -15,10 +16,16 @@ import {
   BasketCount,
 } from "./styles";
 
+import { useStateValue } from "../../contexts/StateProvider";
+
 const Header = () => {
+  const [{ basket }, dispatch] = useStateValue();
+
   return (
     <HeaderComponent>
-      <Logo src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" />
+      <Link to="/">
+        <Logo src="http://pngimg.com/uploads/amazon/amazon_PNG11.png" />
+      </Link>
 
       <Search>
         <SearchInput type="text" />
@@ -41,10 +48,12 @@ const Header = () => {
           <NavigationOptionLineTwo>Prime</NavigationOptionLineTwo>
         </NavigationOption>
 
-        <NavigationOptionBasket>
-          <Basket />
-          <BasketCount>0</BasketCount>
-        </NavigationOptionBasket>
+        <Link to="/checkout">
+          <NavigationOptionBasket>
+            <Basket />
+            <BasketCount>{basket?.length}</BasketCount>
+          </NavigationOptionBasket>
+        </Link>
       </Navigation>
     </HeaderComponent>
   );

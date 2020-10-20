@@ -17,9 +17,16 @@ import {
 } from "./styles";
 
 import { useStateValue } from "../../contexts/StateProvider";
+import { auth } from "../../firebase";
 
 const Header = () => {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
+
+  const handleAuthentication = () => {
+    if (user) {
+      auth.signOut();
+    }
+  };
 
   return (
     <HeaderComponent>
@@ -33,10 +40,14 @@ const Header = () => {
       </Search>
 
       <Navigation>
-        <Link to="/login">
-          <NavigationOption>
-            <NavigationOptionLineOne>Hello Guest</NavigationOptionLineOne>
-            <NavigationOptionLineTwo>Sign In</NavigationOptionLineTwo>
+        <Link to={!user && "/login"}>
+          <NavigationOption onClick={handleAuthentication}>
+            <NavigationOptionLineOne>
+              Hello {user?.email}
+            </NavigationOptionLineOne>
+            <NavigationOptionLineTwo>
+              {user ? "Sign Out" : "Sign In"}
+            </NavigationOptionLineTwo>
           </NavigationOption>
         </Link>
 

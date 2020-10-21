@@ -5,6 +5,8 @@ import { Container, Gift, Button } from "./styles";
 import { useStateValue } from "../../contexts/StateProvider";
 import { getBasketTotal } from "../../contexts/reducer";
 
+import { Link } from "react-router-dom";
+
 const Subtotal = () => {
   const [{ basket }, dispatch] = useStateValue();
 
@@ -27,8 +29,9 @@ const Subtotal = () => {
         thousandSeparator={true}
         prefix={"€"}
       />
-
-      <Button>Proceed to Checkout</Button>
+      <Link to="/payment">
+        <Button>Proceed to Checkout</Button>
+      </Link>
     </Container>
   );
 };

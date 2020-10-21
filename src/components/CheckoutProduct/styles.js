@@ -4,6 +4,8 @@ export const Container = styled.div`
   display: flex;
   margin-top: 20px;
   margin-bottom: 20px;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 20px;
 `;
 
 export const ProductImage = styled.img`

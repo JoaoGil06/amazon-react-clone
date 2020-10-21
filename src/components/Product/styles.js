@@ -14,6 +14,12 @@ export const Container = styled.div`
 
   background: #fff;
   z-index: 1;
+
+  transition: transform 450ms;
+
+  &:hover {
+    transform: scale(1.04) !important;
+  }
 `;
 
 export const Info = styled.div`

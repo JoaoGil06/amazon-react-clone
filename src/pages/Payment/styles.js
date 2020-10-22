@@ -31,6 +31,12 @@ export const Address = styled.div`
   flex: 0.8;
 `;
 
-export const Items = styled.div``;
+export const Items = styled.div`
+  flex: 1;
+`;
 
-export const PaymentDetails = styled.div``;
+export const PaymentDetails = styled.div`
+  flex: 1;
+`;
+
+export const PriceContainer = styled.div``;

@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Checkout from "./pages/Checkout";
 import Payment from "./pages/Payment";
+import Orders from "./pages/Orders";
 
 import GlobalStyles from "./styles/GlobalStyles";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -56,6 +57,9 @@ function App() {
           <Elements stripe={promise}>
             <Payment />
           </Elements>
+        </Route>
+        <Route path="/orders">
+          <Orders />
         </Route>
       </Switch>
 

@@ -6,6 +6,7 @@ import { Link, useHistory } from "react-router-dom";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 
 import axios from "../../axios";
+import { db } from "../../firebase";
 
 import {
   Container,
@@ -45,6 +46,7 @@ const Checkout = () => {
   }, [basket]);
 
   console.log("Secret", clientSecret);
+  console.log("User", user);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -56,10 +58,24 @@ const Checkout = () => {
           card: elements.getElement(CardElement),
         },
       })
-      .then(({ paymentIntend }) => {
+      .then(({ paymentIntent }) => {
+        db.collection("users")
+          .doc(user?.uid)
+          .collection("orders")
+          .doc(paymentIntent.id)
+          .set({
+            basket: basket,
+            amount: paymentIntent.amount,
+            created: paymentIntent.created,
+          });
+
         setSucceeded(true);
         setError(null);
         setProcessing(false);
+
+        dispatch({
+          type: "EMPTY_BASKET",
+        });
 
         history.replace("/orders");
       });

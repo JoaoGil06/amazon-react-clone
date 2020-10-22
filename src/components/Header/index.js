@@ -50,11 +50,12 @@ const Header = () => {
             </NavigationOptionLineTwo>
           </NavigationOption>
         </Link>
-
-        <NavigationOption>
-          <NavigationOptionLineOne>Returns</NavigationOptionLineOne>
-          <NavigationOptionLineTwo>& Orders</NavigationOptionLineTwo>
-        </NavigationOption>
+        <Link to="/orders">
+          <NavigationOption>
+            <NavigationOptionLineOne>Returns</NavigationOptionLineOne>
+            <NavigationOptionLineTwo>& Orders</NavigationOptionLineTwo>
+          </NavigationOption>
+        </Link>
 
         <NavigationOption>
           <NavigationOptionLineOne>Your</NavigationOptionLineOne>

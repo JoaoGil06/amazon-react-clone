@@ -11,7 +11,7 @@ import {
 } from "./styles";
 import { useStateValue } from "../../contexts/StateProvider";
 
-const CheckoutProduct = ({ id, image, title, price, rating }) => {
+const CheckoutProduct = ({ id, image, title, price, rating, hideButton }) => {
   const [{ basket }, dispatch] = useStateValue();
 
   const removeFromBasket = () => {
@@ -36,8 +36,9 @@ const CheckoutProduct = ({ id, image, title, price, rating }) => {
               <span>⭐</span>
             ))}
         </Rating>
-
-        <Button onClick={removeFromBasket}>Remove from basket</Button>
+        {!hideButton && (
+          <Button onClick={removeFromBasket}>Remove from basket</Button>
+        )}
       </ProductInfo>
     </Container>
   );

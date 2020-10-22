@@ -39,4 +39,24 @@ export const PaymentDetails = styled.div`
   flex: 1;
 `;
 
-export const PriceContainer = styled.div``;
+export const PriceContainer = styled.div`
+  > h3 {
+    padding-top: 10px;
+  }
+
+  > button {
+    background: #f0c14b;
+    border-radius: 2px;
+    width: 100%;
+    height: 30px;
+    border: 1px solid;
+    font-weight: bolder;
+    margin-top: 10px;
+    color: #111;
+    border-color: #a88734 #9c7e31 #846a29;
+  }
+`;
+
+export const PaymentForm = styled.form`
+  max-width: 400px;
+`;

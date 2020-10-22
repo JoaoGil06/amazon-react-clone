@@ -1,39 +1,22 @@
-[debug] [2020-10-22T16:54:08.257Z] ----------------------------------------------------------------------
-[debug] [2020-10-22T16:54:08.261Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\JoaoGil\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
-[debug] [2020-10-22T16:54:08.261Z] CLI Version:   8.12.1
-[debug] [2020-10-22T16:54:08.261Z] Platform:      win32
-[debug] [2020-10-22T16:54:08.261Z] Node Version:  v12.19.0
-[debug] [2020-10-22T16:54:08.263Z] Time:          Thu Oct 22 2020 17:54:08 GMT+0100 (GMT+01:00)
-[debug] [2020-10-22T16:54:08.264Z] ----------------------------------------------------------------------
-[debug] [2020-10-22T16:54:08.264Z] 
-[debug] [2020-10-22T16:54:08.283Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2020-10-22T16:54:08.283Z] > authorizing via signed-in user
-[info] i  emulators: Starting emulators: functions, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions, hosting"}}
-[warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project clone-169b5. This may result in unexpected behavior. 
-[debug] [2020-10-22T16:54:08.324Z] [hub] writing locator at C:\Users\JoaoGil\AppData\Local\Temp\hub-clone-169b5.json
-[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, pubsub {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, pubsub\u001b[22m"}}
-[warn] !  Your requested "node" version "10" doesn't match your global version "12" {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"10\" doesn't match your global version \"12\""}}
-[debug] [2020-10-22T16:54:08.394Z] defaultcredentials: writing to file C:\Users\JoaoGil\AppData\Roaming\firebase\joaogmonteiro06_gmail_com_application_default_credentials.json
-[debug] [2020-10-22T16:54:08.399Z] Setting GAC to C:\Users\JoaoGil\AppData\Roaming\firebase\joaogmonteiro06_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\JoaoGil\\AppData\\Roaming\\firebase\\joaogmonteiro06_gmail_com_application_default_credentials.json"}}
-[debug] [2020-10-22T16:54:08.411Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
-[debug] [2020-10-22T16:54:08.412Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
- <request body omitted>
-[debug] [2020-10-22T16:54:08.618Z] <<< HTTP RESPONSE 200 {"date":"Thu, 22 Oct 2020 16:54:11 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
-[debug] [2020-10-22T16:54:08.641Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/clone-169b5/webApps/-/config  
- 
-[debug] [2020-10-22T16:54:09.788Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 22 Oct 2020 16:54:13 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
-[info] i  hosting: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
-[info] +  hosting: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
-[warn] !  ui: Emulator UI unable to start on port 4000, starting on 4001 instead. {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI unable to start on port 4000, starting on 4001 instead."}}
-[debug] [2020-10-22T16:54:09.889Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2020-10-22T16:54:09.889Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
-[debug] [2020-10-22T16:54:09.890Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\JoaoGil\\.cache\\firebase\\emulators\\ui-v1.1.1\\server.bundle.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\JoaoGil\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.1.1\\\\server.bundle.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
-[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
-[debug] [2020-10-22T16:54:10.022Z] Web / API server started at http://localhost:4001
- {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at http://localhost:4001\n"}}
-[info] i  functions: Watching "C:\Programacao\Portfolio\amazon-clone\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Programacao\\Portfolio\\amazon-clone\\functions\" for Cloud Functions..."}}
-[debug] [2020-10-22T16:54:10.170Z] [worker-pool] addWorker(~diagnostic~) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(~diagnostic~)"}}
-[debug] [2020-10-22T16:54:10.170Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key ~diagnostic~, total=1"}}
-[debug] [2020-10-22T16:54:10.170Z] [worker-pool] submitWork(triggerId=) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=)"}}
-[debug] [2020-10-22T16:54:10.171Z] [worker-~diagnostic~-e37de743-cf0d-4380-91dc-f3ea6b78cfd1]: Assigning socketPath: \\?\pipe\C:\Programacao\Portfolio\amazon-clone\functions\4416 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-e37de743-cf0d-4380-91dc-f3ea6b78cfd1]: Assigning socketPath: \\\\?\\pipe\\C:\\Programacao\\Portfolio\\amazon-clone\\functions\\4416"}}
-[debug] [2020-10-22T16:54:10.171Z] [worker-~diagnostic~-e37de743-cf0d-4380-91dc-f3ea6b78cfd1]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-e37de743-cf0d-4380-91dc-f3ea6b78cfd1]: BUSY"}}
+[debug] [2020-10-22T17:31:44.379Z] ----------------------------------------------------------------------
+[debug] [2020-10-22T17:31:44.382Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\JoaoGil\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2020-10-22T17:31:44.382Z] CLI Version:   8.12.1
+[debug] [2020-10-22T17:31:44.382Z] Platform:      win32
+[debug] [2020-10-22T17:31:44.383Z] Node Version:  v12.19.0
+[debug] [2020-10-22T17:31:44.384Z] Time:          Thu Oct 22 2020 18:31:44 GMT+0100 (GMT+01:00)
+[debug] [2020-10-22T17:31:44.384Z] ----------------------------------------------------------------------
+[debug] [2020-10-22T17:31:44.384Z] 
+[debug] [2020-10-22T17:31:44.392Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-10-22T17:31:44.393Z] > authorizing via signed-in user
+[debug] [2020-10-22T17:31:44.393Z] [iam] checking project clone-169b5 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2020-10-22T17:31:44.396Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/clone-169b5:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2020-10-22T17:31:45.260Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 22 Oct 2020 17:31:48 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=669","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-10-22T17:31:45.261Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/clone-169b5/serviceAccounts/clone-169b5@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2020-10-22T17:31:46.101Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 22 Oct 2020 17:31:49 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'clone-169b5'...
+[info] 
+[info] i  deploying functions 
+[info] Running command: npm --prefix "$RESOURCE_DIR" run lint

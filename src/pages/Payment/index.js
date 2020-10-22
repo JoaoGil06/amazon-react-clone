@@ -16,6 +16,7 @@ import {
   Items,
   PaymentDetails,
   PriceContainer,
+  PaymentForm,
 } from "./styles";
 
 import CheckoutProduct from "../../components/CheckoutProduct";
@@ -124,7 +125,7 @@ const Checkout = () => {
           <h3>Payment method</h3>
         </Title>
         <PaymentDetails>
-          <form onSubmit={handleSubmit}>
+          <PaymentForm onSubmit={handleSubmit}>
             <CardElement onChange={handleChange} />
 
             <PriceContainer>
@@ -145,9 +146,7 @@ const Checkout = () => {
                 <span>{processing ? <p>Processing</p> : "Buy Now"}</span>
               </button>
             </PriceContainer>
-
-            {error & <div>{error}</div>}
-          </form>
+          </PaymentForm>
         </PaymentDetails>
       </PaymentSection>
     </Container>

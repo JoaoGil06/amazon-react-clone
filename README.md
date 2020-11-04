@@ -1,4 +1,4 @@
-# Netflix clone with ReactJS
+# Amazon clone with ReactJS
 
 ![Amazon clone preview desktop](https://github.com/JoaoGil06/amazon-react-clone/blob/main/src/assets/AmazonCloneGif.gif) 
 ### [Click here to see the live demo](https://clone-169b5.web.app/) 
